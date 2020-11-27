@@ -7,25 +7,27 @@ public class MemberDTO implements Serializable {
 	
 	private static final long serialVersionUid = 1L;
 	private String mid;
-	private String passwordd;
+	private String password;
 	private int age;
 	private String name;
 	private String userhero;
 	private Date birth;
 	private String job;
 	
+
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MemberDTO(String id, String passwordd, int age, String name, String userhero, Date birth) {
+	public MemberDTO(String id, String password, int age, String name, String job, String userhero, Date birth) {
 		super();
 		this.mid = id;
-		this.passwordd = passwordd;
+		this.password = password;
 		this.age = age;
 		this.name = name;
 		this.userhero = userhero;
 		this.birth = birth;
+		this.job = job;
 	}
 
 	public String getid() {
@@ -36,12 +38,12 @@ public class MemberDTO implements Serializable {
 		this.mid = id;
 	}
 
-	public String getPasswordd() {
-		return passwordd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswordd(String passwordd) {
-		this.passwordd = passwordd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public int getAge() {
@@ -60,6 +62,13 @@ public class MemberDTO implements Serializable {
 		this.name = name;
 	}
 
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
 	public String getUserhero() {
 		return userhero;
 	}
@@ -75,16 +84,11 @@ public class MemberDTO implements Serializable {
 	public void setBirth(Date birth) {
 		this.birth = birth;
 	}
-	public void setJob(String job) {
-		this.job = job;
-	}
-	public String getUserhero() {
-		return userhero;
-	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUid;
 	}
-	
+
 
 	@Override
 	public int hashCode() {
