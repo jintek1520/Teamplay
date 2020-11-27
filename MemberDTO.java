@@ -12,7 +12,8 @@ public class MemberDTO implements Serializable {
 	private String name;
 	private String userhero;
 	private Date birth;
-
+	private String job;
+	
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -74,11 +75,16 @@ public class MemberDTO implements Serializable {
 	public void setBirth(Date birth) {
 		this.birth = birth;
 	}
-
+	public void setJob(String job) {
+		this.job = job;
+	}
+	public String getUserhero() {
+		return userhero;
+	}
 	public static long getSerialversionuid() {
 		return serialVersionUid;
 	}
-
+	
 
 	@Override
 	public int hashCode() {
