@@ -12,30 +12,29 @@ public class MemberDTO implements Serializable {
 	private String name;
 	private String userhero;
 	private Date birth;
-	private String job;
+	
 	
 
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MemberDTO(String id, String password, int age, String name, String job, String userhero, Date birth) {
+	public MemberDTO(String mid, String password, int age, String name, String userhero, Date birth) {
 		super();
-		this.mid = id;
+		this.mid = mid;
 		this.password = password;
 		this.age = age;
 		this.name = name;
 		this.userhero = userhero;
 		this.birth = birth;
-		this.job = job;
 	}
 
-	public String getid() {
+	public String getMid() {
 		return mid;
 	}
 
-	public void setid(String id) {
-		this.mid = id;
+	public void setMid(String mid) {
+		this.mid = mid;
 	}
 
 	public String getPassword() {
@@ -62,13 +61,6 @@ public class MemberDTO implements Serializable {
 		this.name = name;
 	}
 
-	public String getJob() {
-		return job;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
-	}
 	public String getUserhero() {
 		return userhero;
 	}
@@ -88,7 +80,6 @@ public class MemberDTO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUid;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -114,6 +105,7 @@ public class MemberDTO implements Serializable {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "MemberDTO [mid=" + mid + ", name=" + name + "]";
